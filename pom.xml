@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.mevenide</groupId>
   <artifactId>mevenide-parent</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.1.0</version>
   <packaging>pom</packaging>
 
   <name>${project.groupId}:${project.artifactId}</name>
@@ -33,12 +31,13 @@
     <connection>scm:git:git://github.com/mevenide/mevenide-parent.git</connection>
     <developerConnection>scm:git:git@github.com:mevenide/mevenide-parent.git</developerConnection>
     <url>https://github.com/mevenide/mevenide-parent.git/tree/master</url>
+    <tag>0.1.0</tag>
   </scm>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <project.build.outputTimestamp>${git.commit.time}</project.build.outputTimestamp> <!-- set by
+    <project.build.outputTimestamp>2024-11-08T17:26:13Z</project.build.outputTimestamp> <!-- set by
         `git-commit-id-maven-plugin` -->
 
     <!-- exported to child projects -->
