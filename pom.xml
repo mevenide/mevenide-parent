@@ -4,7 +4,7 @@
 
   <groupId>org.mevenide</groupId>
   <artifactId>mevenide-parent</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>${project.groupId}:${project.artifactId}</name>
@@ -31,13 +31,13 @@
     <connection>scm:git:git://github.com/mevenide/mevenide-parent.git</connection>
     <developerConnection>scm:git:git@github.com:mevenide/mevenide-parent.git</developerConnection>
     <url>https://github.com/mevenide/mevenide-parent.git/tree/master</url>
-    <tag>0.1.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <project.build.outputTimestamp>2024-11-08T17:26:13Z</project.build.outputTimestamp> <!-- set by
+    <project.build.outputTimestamp>2024-11-08T17:26:16Z</project.build.outputTimestamp> <!-- set by
         `git-commit-id-maven-plugin` -->
 
     <!-- exported to child projects -->
