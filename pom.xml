@@ -37,7 +37,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <project.build.outputTimestamp>2024-11-08T17:26:16Z</project.build.outputTimestamp> <!-- set by
+    <project.build.outputTimestamp>${git.commit.time}</project.build.outputTimestamp> <!-- set by
         `git-commit-id-maven-plugin` -->
 
     <!-- exported to child projects -->
@@ -88,6 +88,9 @@
 
     <maven-surefire-plugin.forkCount>1</maven-surefire-plugin.forkCount>
     <maven-surefire-plugin.argLine>-Xmx500m</maven-surefire-plugin.argLine>
+
+    <maven-patch-agent.version>0.1.0-SNAPSHOT</maven-patch-agent.version>
+    <skipRewriteBuildOutputTimestamp>true</skipRewriteBuildOutputTimestamp>
   </properties>
 
   <dependencyManagement>
@@ -147,6 +150,11 @@
         <groupId>kr.motd.maven</groupId>
         <artifactId>os-maven-plugin</artifactId>
         <version>1.7.1</version>
+      </extension>
+      <extension>
+        <groupId>org.mevenide.maven</groupId>
+        <artifactId>maven-patch-agent</artifactId>
+        <version>${maven-patch-agent.version}</version>
       </extension>
     </extensions>
 
@@ -231,6 +239,13 @@
         <plugin>
           <artifactId>maven-release-plugin</artifactId>
           <version>3.1.1</version>
+          <dependencies>
+            <dependency>
+              <groupId>org.mevenide.maven</groupId>
+              <artifactId>maven-patch-agent-runtime</artifactId>
+              <version>${maven-patch-agent.version}</version>
+            </dependency>
+          </dependencies>
         </plugin>
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
