@@ -4,7 +4,7 @@
 
   <groupId>org.mevenide</groupId>
   <artifactId>mevenide-parent</artifactId>
-  <version>0.1.1-SNAPSHOT</version>
+  <version>0.1.1</version>
   <packaging>pom</packaging>
 
   <name>${project.groupId}:${project.artifactId}</name>
@@ -31,7 +31,7 @@
     <connection>scm:git:git://github.com/mevenide/mevenide-parent.git</connection>
     <developerConnection>scm:git:git@github.com:mevenide/mevenide-parent.git</developerConnection>
     <url>https://github.com/mevenide/mevenide-parent.git/tree/master</url>
-    <tag>HEAD</tag>
+    <tag>0.1.1</tag>
   </scm>
 
   <properties>
