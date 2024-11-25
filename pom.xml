@@ -882,10 +882,13 @@
     </profile>
     <profile>
       <id>release-plugin-workaround</id>
+      <!-- `maven-release-plugin` always wants to overwrite this property with a fixed timestamp,
+          by putting it under an 'always active' profile, it doesn't find it and so doesn't
+          overwrite it -->
       <activation>
-        <file>
-          <exists>pom.xml</exists>
-        </file>
+        <property>
+          <name>!__ALWAYS_ACTIVE__</name>
+        </property>
       </activation>
       <properties>
         <project.build.outputTimestamp>${git.commit.time}</project.build.outputTimestamp> <!-- set
